@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astin Varghese Thomas | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="#" class="logo">AVT<span>.</span></a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="edit-btn" onclick="openEditor()">✎ Edit Profile</button>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <p class="tag">WELCOME TO MY PORTFOLIO</p>
+        <h1>Hi, I'm <span id="heroName">Astin Varghese Thomas</span></h1>
+        <h2 id="heroRole">Creative Developer & Technology Enthusiast</h2>
+        <p id="heroBio">
+            Passionate about technology, creativity and building meaningful
+            digital experiences. Always learning, creating and exploring.
+        </p>
+        <div class="hero-buttons">
+            <a href="#projects" class="primary-btn">Explore My Work ↗</a>
+            <a href="#contact" class="secondary-btn">Contact Me</a>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="circle">
+            <span>AVT</span>
+        </div>
+        <div class="floating-card">✦ Creative Mind</div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <p class="tag">GET TO KNOW ME</p>
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-card">
+        <h3 id="aboutName">Astin Varghese Thomas</h3>
+        <p id="aboutText">
+            I am an enthusiastic individual passionate about technology,
+            innovation and creativity. I enjoy learning new skills,
+            solving problems and turning ideas into reality.
+        </p>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <p class="tag">WHAT I BRING</p>
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="skills-grid" id="skillsContainer"></div>
+</section>
+
+<section id="projects" class="section">
+    <p class="tag">MY RECENT WORK</p>
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <div class="projects-grid" id="projectsContainer"></div>
+</section>
+
+<section class="section">
+    <p class="tag">MY JOURNEY</p>
+    <h2 class="section-title">Education & <span>Experience</span></h2>
+    <div class="about-card">
+        <h3 id="educationTitle">Your Education</h3>
+        <p id="educationText">Add your educational qualifications here.</p>
+    </div>
+</section>
+
+<section id="contact" class="section contact-section">
+    <p class="tag">LET'S CONNECT</p>
+    <h2 class="section-title">Let's Work <span>Together.</span></h2>
+    <p>Have an idea or opportunity? Feel free to get in touch.</p>
+    <a id="emailLink" href="mailto:your@email.com" class="primary-btn">
+        Get In Touch ↗
+    </a>
+    <div class="social-links" id="socialLinks"></div>
+</section>
+
+<footer>
+    <p>© <span id="year"></span> Astin Varghese Thomas. All rights reserved.</p>
+</footer>
+
+<!-- PROFILE EDITOR -->
+<div class="modal" id="editorModal">
+    <div class="editor">
+        <div class="editor-header">
+            <h2>Edit Portfolio</h2>
+            <button onclick="closeEditor()" class="close-btn">✕</button>
+        </div>
+
+        <label>Full Name</label>
+        <input id="editName" placeholder="Your name">
+
+        <label>Professional Role</label>
+        <input id="editRole" placeholder="Your role">
+
+        <label>Short Introduction</label>
+        <textarea id="editBio"></textarea>
+
+        <label>About Me</label>
+        <textarea id="editAbout"></textarea>
+
+        <label>Education / Experience</label>
+        <input id="editEducationTitle" placeholder="Degree or position">
+        <textarea id="editEducation"></textarea>
+
+        <label>Skills (comma separated)</label>
+        <textarea id="editSkills" placeholder="HTML, CSS, JavaScript"></textarea>
+
+        <label>Projects (one per line: Title | Description)</label>
+        <textarea id="editProjects" placeholder="Portfolio | Personal website"></textarea>
+
+        <label>Email Address</label>
+        <input id="editEmail" type="email" placeholder="your@email.com">
+
+        <label>Instagram URL</label>
+        <input id="editInstagram" placeholder="https://instagram.com/username">
+
+        <label>LinkedIn URL</label>
+        <input id="editLinkedin" placeholder="https://linkedin.com/in/username">
+
+        <div class="editor-actions">
+            <button class="save-btn" onclick="saveProfile()">Save Changes</button>
+            <button class="cancel-btn" onclick="closeEditor()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
