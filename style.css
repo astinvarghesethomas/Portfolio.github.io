@@ -1,0 +1,394 @@
+
+:root {
+    --bg: #090b12;
+    --card: #121622;
+    --accent: #a78bfa;
+    --text: #f5f5f7;
+    --muted: #a1a1aa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(9,11,18,0.9);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #222633;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.logo span, .section-title span, .hero h1 span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 13px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+button, .primary-btn, .secondary-btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.edit-btn, .primary-btn {
+    background: var(--accent);
+    color: #100b1d;
+    padding: 12px 20px;
+    font-weight: 700;
+}
+
+.hero {
+    min-height: 85vh;
+    max-width: 1150px;
+    margin: auto;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tag {
+    color: var(--accent);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    color: #c4b5fd;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.tag) {
+    color: var(--muted);
+    line-height: 1.9;
+    max-width: 550px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    padding: 12px 20px;
+    border: 1px solid #454052;
+    color: white;
+}
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a78bfa, #4f46e5, #17152a);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 80px #8b5cf644;
+}
+
+.circle span {
+    font-size: 65px;
+    font-weight: 800;
+    color: white;
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 15px;
+    right: -25px;
+    padding: 15px 20px;
+    background: var(--card);
+    border: 1px solid #383047;
+    border-radius: 10px;
+    color: var(--accent);
+}
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 20px;
+}
+
+.section-title {
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+.about-card, .skill-card, .project-card {
+    background: var(--card);
+    border: 1px solid #252a38;
+    border-radius: 15px;
+    padding: 30px;
+    transition: .3s;
+}
+
+.about-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.about-card p, .project-card p {
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.skills-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    text-align: center;
+    padding: 25px;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.skill-card:hover, .project-card:hover, .about-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.project-card h3 {
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.project-number {
+    font-size: 32px;
+    color: #51436d;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-section > p:not(.tag) {
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: var(--accent);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+    border-top: 1px solid #252a38;
+    font-size: 13px;
+}
+
+/* EDITOR MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: #000b;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.editor {
+    width: 100%;
+    max-width: 550px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #151927;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #454052;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.close-btn {
+    background: transparent;
+    color: white;
+    font-size: 22px;
+}
+
+.editor label {
+    display: block;
+    margin: 18px 0 8px;
+    color: #c4b5fd;
+    font-size: 13px;
+}
+
+.editor input, .editor textarea {
+    width: 100%;
+    padding: 13px;
+    background: #090d18;
+    border: 1px solid #34394b;
+    border-radius: 7px;
+    color: white;
+    font-family: inherit;
+    outline: none;
+}
+
+.editor input:focus, .editor textarea:focus {
+    border-color: var(--accent);
+}
+
+.editor textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+.editor-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.save-btn, .cancel-btn {
+    padding: 13px 20px;
+    font-weight: 700;
+}
+
+.save-btn {
+    background: var(--accent);
+    color: #100b1d;
+    flex: 1;
+}
+
+.cancel-btn {
+    background: #303545;
+    color: white;
+}
+
+@media(max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 10px 0;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .hero-content > p:not(.tag) {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .circle span {
+        font-size: 48px;
+    }
+
+    .floating-card {
+        right: -15px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+}
